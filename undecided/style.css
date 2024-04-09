@@ -1,0 +1,30 @@
+.hero {
+  height: 50vh;
+  border: 1px solid purple;
+}
+
+/*
+@media (min-width: 768px) {
+  .hero {}
+
+  .buildtier__card {}
+}
+*/
+
+
+/*
+@media (min-width: 1024px) {
+  .navbar {
+
+  }
+
+  .hero__title {
+
+  }
+
+  .recommendedgpus__content {
+  }
+}
+*/
+
+/*@media (min-width: 1200px) {}*/

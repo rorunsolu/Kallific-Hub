@@ -1,0 +1,150 @@
+:root {
+  --color-1: #070a13;
+  --color-2: #f5f7f8;
+  --color-3: #30d5c8;
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+}
+
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "General Sans", sans-serif;
+  background-color: var(--color-1);
+  color: var(--color-2);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-2);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 10px; /* this is the space between the container and the edges of the viewport */
+  padding: 0.5rem; /*maybe i should use padding-left & padding-right instead*/
+  border: 5px solid purple; /* this is to help me with visualzing how the containers or rather sections interact with each other */
+  width: 100%; /* 100% of the viewport width */
+  align-items: center;
+  text-decoration: none;
+  overflow: none;
+}
+
+.button {
+  background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+  background-size: 800% 400%;
+  padding: 0.5em 1em;
+  display: flex;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+  color: var(--color-2);
+  transition: all 0.5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
+  width: calc(33.33% - 1em);
+}
+
+.button:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+}
+
+.button:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.hero {
+  height: 50vh;
+}
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  .section {
+    margin-top: 10rem;
+  }
+}
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+/* 3xl */
+@media (min-width: 1792px) {
+  .container {
+    max-width: 1792px;
+  }
+}
+/* 4xl */
+@media (min-width: 2048px) {
+  .container {
+    max-width: 2048px;
+  }
+}/*# sourceMappingURL=style.css.map */
