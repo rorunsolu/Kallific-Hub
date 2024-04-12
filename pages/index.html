@@ -20,7 +20,7 @@
 
         <section class="hero container">
 
-            <div class="hero__text"> <!--Is this not "deep nesting"-->
+            <div class="hero__text">
                 <h3 class="hero__subtitle">Custom Built PC's</h3>
                 <h1 class="hero__title">Choose Right The First Time</h1>
             </div>
@@ -34,9 +34,7 @@
 
         <section class="buildtier container">
 
-            <a class="buildtier__card" href="#">
-                <h1 class="buildtier__text">Low Tier</h1>
-            </a>
+            <a class="buildtier__card" href="#"><h1 class="buildtier__text">Low Tier</h1></a>
 
             <a class="buildtier__card" href="#">
                 <h1 class="buildtier__text">Mid Tier</h1>
@@ -50,7 +48,8 @@
 
         <section class="recommendedgpus container">
 
-            <a class="recommendedgpus__card">
+            <a class="recommendedgpus__card" id="gpu-1080p">
+                <!-- id attributes can be used for anchoring to a specific part of the page, not sure if I will use this yet -->
                 <h1 class="recommendedgpus__text">1080p</h1>
                 <p class="recommendedgpus__content">This text is just a placeholder for the real text that should go in
                     here.
@@ -61,7 +60,8 @@
                     This text is just a placeholder for the real text that should go in here.</p>
             </a>
 
-            <div class="recommendedgpus__card">
+            <div class="recommendedgpus__card" id="gpu-1440p">
+                <!-- id attributes can be used for anchoring to a specific part of the page, not sure if I will use this yet -->
                 <h1 class="recommendedgpus__text">1440p</h1>
                 <p class="recommendedgpus__content">This text is just a placeholder for the real text that should go in
                     here.
@@ -72,8 +72,9 @@
                     This text is just a placeholder for the real text that should go in here.</p>
             </div>
 
-            <div class="recommendedgpus__card">
-                <h1 class="recommendedgpus__text">4k</h1>
+            <div class="recommendedgpus__card" id="gpu-4k">
+                <!-- id attributes can be used for anchoring to a specific part of the page, not sure if I will use this yet -->
+                <h1 class="recommendedgpus__text">4K</h1>
                 <p class="recommendedgpus__content">This text is just a placeholder for the real text that should go in
                     here.
                     This text

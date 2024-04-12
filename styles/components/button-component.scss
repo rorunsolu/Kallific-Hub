@@ -1,0 +1,59 @@
+// Description: A button component that can be used in any project. The button is a flat design with rounded corners, and an animated gradient background that can be applied to any project using the button component.
+
+// Index:
+// - Button
+// - Button Animations
+
+// Order of styling:
+// 1. Border
+// 2. Padding
+// 3. Background
+// 4. Typography
+// 5. Animation
+
+// Modifiers:
+// :hover - Applies a hover effect to the button when the user hovers over the button
+// :active - Applies an active effect to the button when the user clicks on the button
+
+// Dependencies: The button class must be nested inside the .container class, and the .button class can only be applied within <a> HTML elements
+
+.button {
+    border: none; // No border for a flat design
+    border-radius: 10px; // Rounded corners with 10px radius
+
+    padding: 1em 2em; // causes the button classes shape itself to increase in size according to the space taken up by the text inside the button (the font size of the parent, which in this case is 16px by default set by the html styling from the typography.scss file)
+
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5); // Multi-color gradient background
+    background-size: 800% 400%; // Scales the gradient, allowing the animation effect
+
+    text-decoration: none; // Removes underline from text
+    font-weight: 700; // Bold text with font weight 700
+    line-height: calc(1em + 0.5rem); // Adjust the line height based on the font size
+
+    transition: all 0.5s ease-in-out; // Smooth transition for all properties over 0.5s
+    animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both; // Applies 'gradient' keyframe animation
+
+    &:hover {
+        animation: gradient 3s infinite;
+        transform: scale(1.05);
+    }
+    &:active {
+        animation: gradient 3s infinite;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes gradient {
+    // Do not convert to SCSS format; it will not work
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
