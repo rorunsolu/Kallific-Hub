@@ -1,0 +1,50 @@
+// Description: Landing Page styles
+
+// Index:
+// - Hero
+// - Build Tier
+// - Recommended GPUs
+// - My Build
+
+// Dependencies:
+// - typography.scss
+// - utility.scss
+// - button.scss
+
+.hero { // I can just create 2 hero cards and have the 1st card contain the text and button and the 2nd card contain the image so that is easier for arranging the stuff
+    // OR I can just use display: grid and just use the grid-template-columns as seen in the The "Grid is Great" section of this Firebase YT video https://www.youtube.com/watch?v=Qhaz36TZG5Y
+    height: 50vh;
+    &__image {
+    }
+    &__subtitle {
+    }
+    &__text {
+    }
+    &__title {
+    }
+}
+
+.buildtier {
+    &__card {
+    }
+    &__text {
+    }
+}
+
+.recommendedgpus {
+    &__card {
+    }
+    &__content {
+    }
+    &__text {
+    }
+}
+
+.mybuild {
+    &__content {
+    }
+    &__image {
+    }
+    &__title {
+    }
+}

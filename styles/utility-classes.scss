@@ -1,0 +1,55 @@
+// Description: This file contains the utility classes that are used in the website to make the website code more reusable and responsive
+
+// Index:
+// - Utility Classes
+
+// Order of styling:
+// 1. Layout
+// 2. Margin
+// 3. Padding
+// 4. Border
+
+// Dependencies:
+// - CSS variables from main.scss
+
+.container {
+    display: flex; // sets the flex property which then applies to all of the container class' child elements
+    justify-content: center; // this centers the child elements inside the container class
+    align-items: center; // Centers the container class child items vertically
+
+    margin: 10px; // this is the space between the container class and the edges of the viewport
+    padding: 0 1rem; // Internal spacing, consider adjusting based on content
+    border: 5px solid purple; // creates a border around the container class which is to help me with visualzing the outline of the container class */
+
+    // width: 100%; commented out as it was causing the container to extend past the viewport
+}
+
+// Maps container class breakpoints to size labels and max-widths, each named by screen size with min/max width values
+$breakpoints: (
+    xs: 475px,
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+    xxl: 1536px,
+    xxxl: 1792px,
+    xxxxl: 2048px // 4xl is in speech marks because variables cannot start with numbers
+);
+
+// Iterate over each breakpoint in the map
+@each $size, $width in $breakpoints {
+    // Create a media query for the current breakpoint
+    @media (min-width: $width) {
+        // min-width and max-wtih are the same for this media query
+        .container {
+            max-width: $width; // Set the max-width for .container based on the breakpoint
+        }
+
+        // Apply unique styles for the 'lg' breakpoint
+        @if $size == lg {
+            .section {
+                margin-top: 10rem; // Set top margin for .section at 'lg' breakpoint
+            }
+        }
+    }
+}
