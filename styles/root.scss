@@ -1,0 +1,74 @@
+// Description: This file contains the root variables and styles for the website
+
+:root {
+    // These will only apply if the variable is declared within a selector (e.g. line-height: var(--default-line-height))
+    --color-1: #070a13;
+    --color-2: #f5f7f8;
+    --color-3: #30d5c8;
+
+    --default-line-height: calc(1em + 0.5rem); // Adjust the line height based on the font size
+
+    --font-xxs: 0.5rem;
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.875rem;
+    --font-4xl: 2.25rem;
+    --font-5xl: 3rem;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; // Sets the defaukt font size of the page to 16px
+}
+
+a {
+    text-decoration: none; // Removes underline from text
+    color: var(--color-2);
+}
+
+body {
+    background-color: var(--color-1);
+    margin: 0; // Remove the margin in all browsers
+    color: var(--color-2); // Base color for all text
+    font-family: "General Sans", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-contrast-higher);
+    line-height: 1.2;
+    font-weight: 700;
+
+    // Individual font sizes
+    &.h1 {
+        font-size: var(--font-2xl);
+    }
+    &.h2 {
+        font-size: var(--font-xl);
+    }
+    &.h3 {
+        font-size: var(--font-lg);
+    }
+    &.h4 {
+        font-size: var(--font-md);
+    }
+}
